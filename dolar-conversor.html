@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1.0 , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dolar-conversor.css">
+    <script src="https://kit.fontawesome.com/8145e8cf22.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Conversor</h1>
+
+    <div id="main-card">
+        <div id="wrapper-radios">
+            <div class="radios">
+                <input type="radio" id="radioR$" name="radio" value="Real>Dolar">
+                <label for="Real>Dolar">Real to Dolar</label>
+            </div>
+            <div class="radios">
+                <input type="radio" id="radioUS$" name="radio" value="Dolar>Real">
+                <label for="Dolar>Real">Dolar to Real</label>
+            </div>
+        </div>
+
+        <div id="calculator">
+            <div id="wrapper-inputs">
+                <input type="number" id="input-value" name="input-value">
+                <i class="fas fa-arrow-right"></i>
+                <input type="number" id="exchange" name="exchange" placeholder="Ex 5.15">
+                <i class="fas fa-arrow-right"></i>
+                <input type="number" readonly id="output-value" name="output-value">
+            </div>
+            <div class="rate">
+                <p>Input value</p>
+                <label for="exchange">Exchange rate</label>
+                <p>Output value</p>
+            </div>
+            <input type="button" id="button" name="button" value="Calculate" onclick="convert()">
+        </div>
+    </div>
+
+    <footer>
+        &copy; Ortiz
+    </footer>
+
+
+    <script src="dolar-conversor.js"></script>
+</body>
+</html>
+
+<!--
+
+    /*
+
+
+function run(){
+
+    let output_value = document.querySelector('output-value')
+    
+    output_value = convert()
+    output_value.innerHTML = `${output_value}`
+    }
+    
+    function convert(){
+        let input = document.querySelector('input#input-value').value
+        let output = 0
+        let radios = document.getElementsByName('radio')
+        let check = ""
+        let exchange_rate = document.querySelector('input#exchange').value
+    
+        for(let i=0 ; i < radios.length; i++){
+            if(radios[i].checked == true){
+            check = radios[i].value 
+            }
+        }
+        if(check==""){
+            window.alert("Select a valid conversor!")
+        }
+        else if(check == "Real>Dolar"){
+            output = convert1(input, exchange_rate)
+        }
+        else if(check == "Dolar>Real"){
+            output = convert2(input,exchange_rate)
+        } 
+        return output
+    
+    }
+    
+    function convert1(a,b){
+        let c = 0
+        c = a/b
+        return c
+    }
+    
+    function convert2(a,b){
+        c = a*b
+        return c
+    }
+    
+    
+/*
+
+
+-->
